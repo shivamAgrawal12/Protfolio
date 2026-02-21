@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* ------------------ */
+/* Base Theme         */
+/* ------------------ */
+
+:root {
+  --bg: #05060f;
+  --card: rgba(15, 15, 25, 0.8);
+  --text: #f8fafc;
+  --accent: #f97316;
+}
+
+/* ------------------ */
+/* Base Styles        */
+/* ------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+
+  /* Custom Cursor Desktop */
+  cursor: none;
+}
+
+/* Mobile Cursor */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* ------------------ */
+/* Glass Effect       */
+/* -------------*
