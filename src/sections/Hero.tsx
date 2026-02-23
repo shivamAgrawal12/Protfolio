@@ -127,7 +127,8 @@ export default function Hero() {
 
             {/* View Work */}
             <a
-              href="#projects"
+              href="/resume.pdf"
+              download
               className="
                 px-7 py-3 rounded-lg
                 bg-orange-500
@@ -136,7 +137,8 @@ export default function Hero() {
                 font-medium
               "
             >
-              View Work
+              
+              Resume
             </a>
 
             {/* Contact */}
@@ -157,8 +159,7 @@ export default function Hero() {
 
             {/* Resume */}
             <a
-              href="/resume.pdf"
-              download
+              href="#projects"
               className="
                 px-7 py-3 rounded-lg
                 border border-gray-600
@@ -169,7 +170,7 @@ export default function Hero() {
                 font-medium
               "
             >
-              Resume
+              View Work
             </a>
 
           </div>

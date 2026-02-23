@@ -5,10 +5,63 @@ import {
   Linkedin,
   Send,
 } from "lucide-react"
+import { useRef } from "react"
+import emailjs from "@emailjs/browser"
 
 /* ================= COMPONENT ================= */
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!formRef.current) return
+
+    const formData = new FormData(formRef.current)
+
+    const name = formData.get("user_name") as string
+    const email = formData.get("user_email") as string
+    const message = formData.get("message") as string
+
+    // Combine all info into ONE message field
+    const finalMessage = `
+New Message from Portfolio
+
+----------------------------------------
+
+Name: ${name}
+Email: ${email}
+
+----------------------------------------
+
+Message:
+${message}
+
+----------------------------------------
+`
+
+    emailjs
+      .send(
+        "service_csa1qfj",
+        "template_lbl35dm",
+        {
+          message: finalMessage, // 👈 sending everything inside message
+        },
+        "NoFD-Mq0GLCONReKg"
+      )
+      .then(
+        () => {
+          alert("Message sent successfully 🚀")
+          formRef.current?.reset()
+        },
+        (error) => {
+          console.error(error)
+          alert("Failed to send message ❌")
+        }
+      )
+  }
+
   return (
     <section
       id="contact"
@@ -52,7 +105,7 @@ export default function Contact() {
         {/* Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* ---------- Left Info ---------- */}
+          {/* LEFT SIDE (UNCHANGED) */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -70,24 +123,17 @@ export default function Contact() {
               I'm always open to meaningful conversations.
             </p>
 
-            {/* Info Items */}
-            <div className="space-y-4">
-
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400">
-                  <Mail size={20} />
-                </div>
-
-                <span>
-                  agrawalshivam7352@gmail.com
-                </span>
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-xl bg-orange-500/10 text-orange-400">
+                <Mail size={20} />
               </div>
 
+              <span>
+                agrawalshivam7352@gmail.com
+              </span>
             </div>
 
-            {/* Social Icons */}
             <div className="flex gap-5 pt-6">
-
               <a
                 href="mailto:agrawalshivam7352@gmail.com"
                 className="p-3 rounded-full bg-white/5 hover:bg-orange-500 transition"
@@ -110,12 +156,13 @@ export default function Contact() {
               >
                 <Linkedin />
               </a>
-
             </div>
           </motion.div>
 
-          {/* ---------- Right Form ---------- */}
+          {/* FORM (UNCHANGED DESIGN) */}
           <motion.form
+            ref={formRef}
+            onSubmit={sendEmail}
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -130,131 +177,64 @@ export default function Contact() {
               space-y-6
             "
           >
-            {/* Name */}
             <div className="relative">
-
               <input
                 type="text"
+                name="user_name"
                 required
                 className="
-                  peer w-full
-                  bg-transparent
-                  border border-gray-700
-                  rounded-lg
-                  px-4 py-3
-                  outline-none
-                  focus:border-orange-500
-                  transition
+                  peer w-full bg-transparent
+                  border border-gray-700 rounded-lg
+                  px-4 py-3 outline-none
+                  focus:border-orange-500 transition
                 "
               />
-
-              <label
-                className="
-                  absolute left-4 top-3
-                  text-gray-400
-                  peer-focus:-top-2
-                  peer-focus:text-xs
-                  peer-focus:text-orange-400
-                  peer-valid:-top-2
-                  peer-valid:text-xs
-                  peer-valid:text-orange-400
-                  bg-black px-1
-                  transition-all
-                "
-              >
+              <label className="absolute left-4 top-3 text-gray-400 bg-black px-1 transition-all peer-focus:-top-2 peer-focus:text-xs peer-focus:text-orange-400 peer-valid:-top-2 peer-valid:text-xs peer-valid:text-orange-400">
                 Your Name
               </label>
-
             </div>
 
-            {/* Email */}
             <div className="relative">
-
               <input
                 type="email"
+                name="user_email"
                 required
                 className="
-                  peer w-full
-                  bg-transparent
-                  border border-gray-700
-                  rounded-lg
-                  px-4 py-3
-                  outline-none
-                  focus:border-orange-500
-                  transition
+                  peer w-full bg-transparent
+                  border border-gray-700 rounded-lg
+                  px-4 py-3 outline-none
+                  focus:border-orange-500 transition
                 "
               />
-
-              <label
-                className="
-                  absolute left-4 top-3
-                  text-gray-400
-                  peer-focus:-top-2
-                  peer-focus:text-xs
-                  peer-focus:text-orange-400
-                  peer-valid:-top-2
-                  peer-valid:text-xs
-                  peer-valid:text-orange-400
-                  bg-black px-1
-                  transition-all
-                "
-              >
+              <label className="absolute left-4 top-3 text-gray-400 bg-black px-1 transition-all peer-focus:-top-2 peer-focus:text-xs peer-focus:text-orange-400 peer-valid:-top-2 peer-valid:text-xs peer-valid:text-orange-400">
                 Email Address
               </label>
-
             </div>
 
-            {/* Message */}
             <div className="relative">
-
               <textarea
+                name="message"
                 rows={4}
                 required
                 className="
-                  peer w-full
-                  bg-transparent
-                  border border-gray-700
-                  rounded-lg
-                  px-4 py-3
-                  outline-none
-                  focus:border-orange-500
-                  transition
-                  resize-none
+                  peer w-full bg-transparent
+                  border border-gray-700 rounded-lg
+                  px-4 py-3 outline-none
+                  focus:border-orange-500 transition resize-none
                 "
               />
-
-              <label
-                className="
-                  absolute left-4 top-3
-                  text-gray-400
-                  peer-focus:-top-2
-                  peer-focus:text-xs
-                  peer-focus:text-orange-400
-                  peer-valid:-top-2
-                  peer-valid:text-xs
-                  peer-valid:text-orange-400
-                  bg-black px-1
-                  transition-all
-                "
-              >
+              <label className="absolute left-4 top-3 text-gray-400 bg-black px-1 transition-all peer-focus:-top-2 peer-focus:text-xs peer-focus:text-orange-400 peer-valid:-top-2 peer-valid:text-xs peer-valid:text-orange-400">
                 Message
               </label>
-
             </div>
 
-            {/* Button */}
             <button
               type="submit"
               className="
-                w-full
-                flex items-center justify-center gap-2
-                px-6 py-3
-                rounded-lg
-                bg-orange-500
-                hover:bg-orange-600
-                transition
-                font-medium
-                shadow-lg
+                w-full flex items-center justify-center gap-2
+                px-6 py-3 rounded-lg
+                bg-orange-500 hover:bg-orange-600
+                transition font-medium shadow-lg
                 hover:shadow-orange-500/40
               "
             >
