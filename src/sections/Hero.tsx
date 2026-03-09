@@ -229,7 +229,7 @@ export default function Hero() {
           onClick={() => setOpenResume(false)}
           className="
           fixed inset-0
-          bg-black/80
+          bg-black/20
           backdrop-blur-md
           z-50 flex items-center justify-center
           p-4
