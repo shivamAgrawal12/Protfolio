@@ -1,11 +1,9 @@
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import { Toaster } from "sonner"
-
 import AnimatedBackground from "./components/AnimatedBackground"
 import CustomCursor from "./components/CustomCursor"
 import ChatBot from "./components/ChatBot"
-
 import { useScrollAnimations } from "./hooks/useScrollAnimations"
 
 export default function App() {

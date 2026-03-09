@@ -22,6 +22,7 @@ const skillGroups = [
       "JavaScript",
       "TypeScript",
       "Redux",
+      "Hook",
       "HTML5",
       "CSS3",
     ],
