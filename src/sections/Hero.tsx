@@ -1,11 +1,8 @@
 import { motion } from "framer-motion"
 import { Typewriter } from "react-simple-typewriter"
-import { Download } from "lucide-react"
-import { useState } from "react"
+import { Rocket, MessageCircle, FileDown } from "lucide-react"
 
 export default function Hero() {
-
-  const [openResume, setOpenResume] = useState(false)
 
   return (
     <>
@@ -122,17 +119,21 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
 
+              {/* View Work */}
               <a
                 href="#projects"
                 className="
                 px-7 py-3 rounded-lg
                 bg-orange-500 hover:bg-orange-600
                 transition font-medium
+                flex items-center gap-2
               "
               >
+                <Rocket size={18} />
                 View Work
               </a>
 
+              {/* Contact */}
               <a
                 href="#contact"
                 className="
@@ -142,13 +143,17 @@ export default function Hero() {
                 hover:bg-orange-500
                 hover:text-black
                 transition font-medium
+                flex items-center gap-2
               "
               >
+                <MessageCircle size={18} />
                 Let's Connect
               </a>
 
-              <button
-                onClick={() => setOpenResume(true)}
+              {/* Download Resume */}
+              <a
+                href="/resume.pdf"
+                download
                 className="
                 px-7 py-3 rounded-lg
                 border border-gray-600
@@ -156,10 +161,12 @@ export default function Hero() {
                 hover:border-orange-500
                 hover:text-orange-500
                 transition font-medium
+                flex items-center gap-2
               "
               >
-                View Resume
-              </button>
+                <FileDown size={18} />
+                Resume
+              </a>
 
             </div>
 
@@ -199,10 +206,7 @@ export default function Hero() {
               "
               >
 
-                <Typewriter
-                  words={[
-
-`const developer = {
+                {`const developer = {
   name: "Shivam Agrawal",
   role: "Frontend Engineer",
   designer: true,
@@ -214,16 +218,7 @@ export default function Hero() {
     "Next.js"
   ],
   passion: "Building Impactful UI"
-};`
-
-                  ]}
-                  loop
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={20}
-                  deleteSpeed={10}
-                  delaySpeed={3000}
-                />
+};`}
 
               </pre>
 
@@ -234,77 +229,6 @@ export default function Hero() {
         </div>
 
       </section>
-
-
-      {/* RESUME POPUP */}
-
-      {openResume && (
-
-        <div
-          onClick={() => setOpenResume(false)}
-          className="
-          fixed inset-0
-          bg-black/40
-          z-50
-          flex items-center justify-center
-          p-4
-        "
-        >
-
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="
-            w-full max-w-4xl
-            bg-black
-            border border-white/10
-            rounded-xl
-            flex flex-col
-            h-[90vh]
-          "
-          >
-
-            <iframe
-              src="/resume.pdf"
-              className="flex-1 w-full"
-            />
-
-            <div className="p-4 flex justify-end gap-3">
-
-              <button
-                onClick={() => setOpenResume(false)}
-                className="
-                px-4 py-2
-                border border-gray-600
-                rounded-lg
-                hover:border-orange-500
-                transition
-              "
-              >
-                Close
-              </button>
-
-              <a
-                href="/resume.pdf"
-                download
-                className="
-                flex items-center gap-2
-                px-4 py-2
-                bg-orange-500 hover:bg-orange-600
-                rounded-lg transition
-              "
-              >
-                <Download size={18} />
-                Download
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      )}
-
     </>
   )
 }
