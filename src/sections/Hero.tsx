@@ -25,7 +25,7 @@ export default function Hero() {
           <div
             className="
             absolute inset-0
-            bg-gradient-to-br
+            bg-linear-to-r
             from-orange-500/10
             via-transparent
             to-purple-600/10
@@ -81,7 +81,7 @@ export default function Hero() {
               Hi, I'm <span className="text-orange-500">Shivam</span>
               <br />
 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-pink-500">
                 Agrawal
               </span>
 
