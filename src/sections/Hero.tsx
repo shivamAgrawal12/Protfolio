@@ -3,8 +3,6 @@ import { Typewriter } from "react-simple-typewriter"
 import { Download } from "lucide-react"
 import { useState } from "react"
 
-import resume from "../assets/resume.pdf"
-
 export default function Hero() {
 
   const [openResume, setOpenResume] = useState(false)
@@ -266,7 +264,7 @@ export default function Hero() {
           >
 
             <iframe
-              src={resume}
+              src="/resume.pdf"
               className="flex-1 w-full"
             />
 
@@ -286,7 +284,7 @@ export default function Hero() {
               </button>
 
               <a
-                href={resume}
+                href="/resume.pdf"
                 download
                 className="
                 flex items-center gap-2
