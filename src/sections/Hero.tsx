@@ -1,13 +1,13 @@
 import { motion } from "framer-motion"
 import { Typewriter } from "react-simple-typewriter"
-import { Download, X } from "lucide-react"
+import { Download } from "lucide-react"
 import { useState } from "react"
+
+import resume from "../assets/resume.pdf"
 
 export default function Hero() {
 
   const [openResume, setOpenResume] = useState(false)
-
-  const resumeURL = `${window.location.origin}/resume.pdf`
 
   return (
     <>
@@ -19,6 +19,7 @@ export default function Hero() {
         overflow-hidden px-6
       "
       >
+
         {/* Background */}
         <div className="absolute inset-0 -z-10">
 
@@ -54,6 +55,7 @@ export default function Hero() {
             rounded-full blur-3xl
           "
           />
+
         </div>
 
         <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center">
@@ -79,6 +81,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold leading-tight mb-6">
 
               Hi, I'm <span className="text-orange-500">Shivam</span>
+
               <br />
 
               <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-pink-500">
@@ -90,7 +93,9 @@ export default function Hero() {
             <h2 className="text-xl md:text-2xl text-gray-400 mb-6">
 
               I'm a{" "}
+
               <span className="text-orange-400 font-semibold">
+
                 <Typewriter
                   words={[
                     "Frontend Developer",
@@ -105,6 +110,7 @@ export default function Hero() {
                   deleteSpeed={50}
                   delaySpeed={1500}
                 />
+
               </span>
 
             </h2>
@@ -158,7 +164,9 @@ export default function Hero() {
               </button>
 
             </div>
+
           </motion.div>
+
 
           {/* CODE TAB */}
           <motion.div
@@ -167,6 +175,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
+
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity }}
@@ -191,8 +200,10 @@ export default function Hero() {
                 h-[260px] md:h-auto
               "
               >
+
                 <Typewriter
                   words={[
+
 `const developer = {
   name: "Shivam Agrawal",
   role: "Frontend Engineer",
@@ -206,6 +217,7 @@ export default function Hero() {
   ],
   passion: "Building Impactful UI"
 };`
+
                   ]}
                   loop
                   cursor
@@ -214,16 +226,20 @@ export default function Hero() {
                   deleteSpeed={10}
                   delaySpeed={3000}
                 />
+
               </pre>
 
             </motion.div>
+
           </motion.div>
 
         </div>
+
       </section>
 
 
       {/* RESUME POPUP */}
+
       {openResume && (
 
         <div
@@ -250,7 +266,7 @@ export default function Hero() {
           >
 
             <iframe
-              src={resumeURL}
+              src={resume}
               className="flex-1 w-full"
             />
 
@@ -270,7 +286,7 @@ export default function Hero() {
               </button>
 
               <a
-                href={resumeURL}
+                href={resume}
                 download
                 className="
                 flex items-center gap-2
@@ -288,6 +304,7 @@ export default function Hero() {
           </div>
 
         </div>
+
       )}
 
     </>
