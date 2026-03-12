@@ -7,6 +7,8 @@ export default function Hero() {
 
   const [openResume, setOpenResume] = useState(false)
 
+  const resumeURL = `${window.location.origin}/resume.pdf`
+
   return (
     <>
       <section
@@ -56,7 +58,7 @@ export default function Hero() {
 
         <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* LEFT */}
+          {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
@@ -158,7 +160,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* RIGHT CODE TAB */}
+          {/* CODE TAB */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
@@ -182,7 +184,6 @@ export default function Hero() {
                 <span className="w-3 h-3 bg-green-500 rounded-full" />
               </div>
 
-              {/* Typing Code Animation */}
               <pre
                 className="
                 text-sm text-gray-300
@@ -222,16 +223,16 @@ export default function Hero() {
       </section>
 
 
-      {/* RESUME MODAL */}
+      {/* RESUME POPUP */}
       {openResume && (
 
         <div
           onClick={() => setOpenResume(false)}
           className="
           fixed inset-0
-          bg-black/20
-          backdrop-blur-md
-          z-50 flex items-center justify-center
+          bg-black/40
+          z-50
+          flex items-center justify-center
           p-4
         "
         >
@@ -248,24 +249,12 @@ export default function Hero() {
           "
           >
 
-            <div className="flex justify-between items-center p-4 border-b border-white/10">
-
-              <h3 className="font-semibold text-orange-400">
-                Resume Preview
-              </h3>
-
-              <button onClick={() => setOpenResume(false)}>
-                <X />
-              </button>
-
-            </div>
-
             <iframe
-              src="/resume.pdf"
+              src={resumeURL}
               className="flex-1 w-full"
             />
 
-            <div className="p-4 border-t border-white/10 flex justify-end gap-3">
+            <div className="p-4 flex justify-end gap-3">
 
               <button
                 onClick={() => setOpenResume(false)}
@@ -281,7 +270,7 @@ export default function Hero() {
               </button>
 
               <a
-                href="/resume.pdf"
+                href={resumeURL}
                 download
                 className="
                 flex items-center gap-2
