@@ -14,6 +14,24 @@ const projects = [
     link: "https://pocket-senior-by-balamurali-b.netlify.app/#/",
   },
   {
+    title: "Movie Views",
+    desc: "Review movies infomation and trailers",
+    tech: ["React", "Redux", "CSS", "Tailwind CSS", "API"],
+    link: "https://moviedemostream.netlify.app/",
+  },
+  {
+    title: "XYZ Restaurant",
+    desc: "Restaurant reservation system",
+    tech: ["React", "Redux", "CSS"],
+    link: "https://xyresturent.netlify.app/",
+  },
+  {
+    title: "Smart Locker",
+    desc: "User type authentication system for smart locker",
+    tech: ["React", "Redux", "CSS", "Tailwind CSS", "API"],
+    link: "https://app.qikpod.com/",
+  },
+  {
     title: "Market Report",
     desc: "Admin system",
     tech: ["React", "Redux", "CSS", "Tailwind CSS", "API"],

@@ -1,8 +1,61 @@
 import { motion } from "framer-motion"
 import { Typewriter } from "react-simple-typewriter"
 import { Rocket, MessageCircle, FileDown } from "lucide-react"
+import { useEffect, useState } from "react"
+
+const CODE_LINES = `const developer = {
+  name: "Shivam Agrawal",
+  role: "Frontend Engineer",
+  designer: true,
+  experience: "3.6+ Years",
+  skills: [
+    "React",
+    "TypeScript",
+    "Tailwind",
+    "Next.js"
+  ],
+  passion: "Building Impactful UI"
+};`
 
 export default function Hero() {
+  const [displayedCode, setDisplayedCode] = useState("")
+  const [charIndex, setCharIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [isPaused, setIsPaused] = useState(false)
+
+  useEffect(() => {
+    if (isPaused) return
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (charIndex < CODE_LINES.length) {
+          setDisplayedCode(CODE_LINES.slice(0, charIndex + 1))
+          setCharIndex((prev) => prev + 1)
+        } else {
+          // Pause before deleting
+          setIsPaused(true)
+          setTimeout(() => {
+            setIsPaused(false)
+            setIsDeleting(true)
+          }, 2000)
+        }
+      } else {
+        if (charIndex > 0) {
+          setDisplayedCode(CODE_LINES.slice(0, charIndex - 1))
+          setCharIndex((prev) => prev - 1)
+        } else {
+          // Pause before typing again
+          setIsPaused(true)
+          setTimeout(() => {
+            setIsPaused(false)
+            setIsDeleting(false)
+          }, 800)
+        }
+      }
+    }, isDeleting ? 15 : 30)
+
+    return () => clearTimeout(timeout)
+  }, [charIndex, isDeleting, isPaused])
 
   return (
     <>
@@ -169,7 +222,7 @@ export default function Hero() {
               </a>
 
             </div>
-
+ 
           </motion.div>
 
 
@@ -202,24 +255,13 @@ export default function Hero() {
                 className="
                 text-sm text-gray-300
                 overflow-x-auto
-                h-[260px] md:h-auto
+                h-[260px]
+                md:h-auto md:max-h-none md:min-h-[260px]
+                whitespace-pre-wrap
               "
               >
-
-                {`const developer = {
-  name: "Shivam Agrawal",
-  role: "Frontend Engineer",
-  designer: true,
-  experience: "3.6+ Years",
-  skills: [
-    "React",
-    "TypeScript",
-    "Tailwind",
-    "Next.js"
-  ],
-  passion: "Building Impactful UI"
-};`}
-
+                {displayedCode}
+                <span className="animate-pulse text-orange-400">▌</span>
               </pre>
 
             </motion.div>
