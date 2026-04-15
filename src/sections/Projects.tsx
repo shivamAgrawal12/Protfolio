@@ -20,10 +20,10 @@ const projects = [
     link: "https://moviedemostream.netlify.app/",
   },
   {
-    title: "XYZ Restaurant",
-    desc: "Restaurant reservation system",
-    tech: ["React", "Redux", "CSS"],
-    link: "https://xyresturent.netlify.app/",
+    title: "Website",
+    desc: "Robotic Company website",
+    tech: ["React", "Tailwind CSS",  "Typescript", "Redux"],
+    link: "https://leapmile.com/",
   },
   {
     title: "Smart Locker",
@@ -38,11 +38,12 @@ const projects = [
     link: "https://reports-market.netlify.app/",
   },
   {
-    title: "Website",
-    desc: "Robotic Company website",
-    tech: ["React", "Tailwind CSS",  "Typescript", "Redux"],
-    link: "https://leapmile.com/",
+    title: "XYZ Restaurant",
+    desc: "Restaurant reservation system",
+    tech: ["React", "Redux", "CSS"],
+    link: "https://xyresturent.netlify.app/",
   },
+  
   
 ]
 
