@@ -18,6 +18,7 @@ const skillGroups = [
     skills: [
       "React.js",
       "Next.js",
+      "React Native",
       "Vue.js",
       "JavaScript",
       "TypeScript",
@@ -37,6 +38,8 @@ const skillGroups = [
       "Responsive Design",
       "UI/UX",
       "Component Libraries",
+      "CSS-in-JS",
+      "CSS Animations",
       "Animations",
     ],
   },
@@ -48,8 +51,12 @@ const skillGroups = [
       "Node.js",
       "REST APIs",
       "Python",
-      "Core Java",
       "SQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Git",
+      "Docker",
+      "CI/CD",  
       "Playwright"
     ],
   },
@@ -74,7 +81,6 @@ const skillGroups = [
       "Claude",
       "Chat GPT",
       "Flutterflow",
-      "Emergent",
       "Many More ..."
     ],
   },

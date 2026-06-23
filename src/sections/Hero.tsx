@@ -7,7 +7,7 @@ const CODE_LINES = `const developer = {
   name: "Shivam Agrawal",
   role: "Frontend Engineer",
   designer: true,
-  experience: "3.6+ Years",
+  experience: "4+ Years",
   skills: [
     "React",
     "TypeScript",

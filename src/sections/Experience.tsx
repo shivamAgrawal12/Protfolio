@@ -5,14 +5,27 @@ import { motion } from "framer-motion"
 const experiences = [
   {
     role: "Software Engineer",
-    company: "LeapMile Robotics",
-    duration: "Aug 2022 - Feb 2026 (3.6+ years)",
+    company: "Zuqo Technologies",
+    duration: "Mar 2022 - Present (5+ months)",
     highlights: [
-      "Achieved up to 70% improvement in application and API performance through systematic optimization, refactoring, and efficient state management.",
       "Developed and maintained scalable, secure, and high-performance web applications using React.js, TypeScript, JavaScript, Tailwind CSS, and Python.",
       "Led and collaborated with cross-functional teams to deliver impactful, user-focused UI features that improved product usability and business outcomes.",
       "Enhanced application performance, accessibility, and code quality by implementing modern frontend best practices and reusable component architectures.",
       "Leveraged Git for version control and implemented structured branching strategies to streamline development, code reviews, testing, and release workflows."
+    ],
+  },
+  {
+    role: "Software Engineer",
+    company: "LeapMile Robotics",
+    duration: "Aug 2022 - Feb 2026 (3.7+ years)",
+    highlights: [
+      "Sole frontend engineer on a real-time robot control and operations platform, owning the entire client-side architecture from initial design handoff to production deployment.",
+      "Delivered a 70% improvement in API response accuracy and page load performance through systematic refactoring, Redux state optimisation, and targeted elimination of unnecessary re-renders.",
+      "Built and maintained a live data visualisation and interactive mapping module for real-time robot telemetry, enabling operators to monitor fleet status and intervene remotely.",
+      "Engineered a role-based authentication and user management system with secure token handling, session management, and permission-level UI gating using React and TypeScript.",
+      "Designed and shipped a reporting and analytics dashboard, translating raw operational data into actionable metrics for management built with reusable chart components and REST API integration.",
+      "Created a reusable component library (React + Tailwind CSS + Typescript) that standardized UI patterns across the product, reducing front-end build time for new features and improving design consistency.",
+      "Maintained CI/CD pipelines with Docker, collaborated via Git in an agile environment, and used Python for internal scripting and data processing tasks."
     ],
   },
 ]
