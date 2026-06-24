@@ -186,23 +186,6 @@ export default function Hero() {
                 View Work
               </a>
 
-              {/* Contact */}
-              <a
-                href="#contact"
-                className="
-                px-7 py-3 rounded-lg
-                border border-orange-500
-                text-orange-500
-                hover:bg-orange-500
-                hover:text-black
-                transition font-medium
-                flex items-center gap-2
-              "
-              >
-                <MessageCircle size={18} />
-                Let's Connect
-              </a>
-
               {/* Download Resume */}
               <a
                 href="/resume.pdf"
@@ -220,6 +203,25 @@ export default function Hero() {
                 <FileDown size={18} />
                 Resume
               </a>
+
+              {/* Contact */}
+              <a
+                href="#contact"
+                className="
+                px-7 py-3 rounded-lg
+                border border-orange-500
+                text-orange-500
+                hover:bg-orange-500
+                hover:text-black
+                transition font-medium
+                flex items-center gap-2
+              "
+              >
+                <MessageCircle size={18} />
+                Let's Connect
+              </a>
+
+              
 
             </div>
  

@@ -6,7 +6,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Zuqo Technologies",
-    duration: "Mar 2022 - Present (5+ months)",
+    duration: "Mar 2022 - Present",
     highlights: [
       "Developed and maintained scalable, secure, and high-performance web applications using React.js, TypeScript, JavaScript, Tailwind CSS, and Python.",
       "Led and collaborated with cross-functional teams to deliver impactful, user-focused UI features that improved product usability and business outcomes.",
@@ -17,7 +17,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "LeapMile Robotics",
-    duration: "Aug 2022 - Feb 2026 (3.7+ years)",
+    duration: "Aug 2022 - Feb 2026",
     highlights: [
       "Sole frontend engineer on a real-time robot control and operations platform, owning the entire client-side architecture from initial design handoff to production deployment.",
       "Delivered a 70% improvement in API response accuracy and page load performance through systematic refactoring, Redux state optimisation, and targeted elimination of unnecessary re-renders.",
