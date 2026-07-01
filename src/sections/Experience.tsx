@@ -6,7 +6,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Zuqo Technologies",
-    duration: "Mar 2022 - Present",
+    duration: "Mar 2026 - Jun 2026",
     highlights: [
       "Developed and maintained scalable, secure, and high-performance web applications using React.js, TypeScript, JavaScript, Tailwind CSS, and Python.",
       "Led and collaborated with cross-functional teams to deliver impactful, user-focused UI features that improved product usability and business outcomes.",
