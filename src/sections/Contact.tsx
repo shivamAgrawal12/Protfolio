@@ -8,6 +8,8 @@ import {
 import { useRef } from "react"
 import emailjs from "@emailjs/browser"
 
+import { FaWhatsapp } from "react-icons/fa";
+
 /* ================= COMPONENT ================= */
 
 export default function Contact() {
@@ -136,7 +138,17 @@ ${message}
             <div className="flex gap-5 pt-6">
               <a
                 href="mailto:agrawalshivam7352@gmail.com"
-                className="p-3 rounded-full bg-white/5 hover:bg-orange-500 transition"
+                className="
+                  flex items-center justify-center
+                  w-13 h-13
+                  rounded-full
+                  bg-white/5
+                  border border-white/5
+                  text-white
+                  transition-all duration-300
+                  hover:bg-orange-500
+                  hover:shadow-lg hover:shadow-orange-500/30
+                "
               >
                 <Mail />
               </a>
@@ -144,7 +156,17 @@ ${message}
               <a
                 href="https://github.com/shivamAgrawal12"
                 target="_blank"
-                className="p-3 rounded-full bg-white/5 hover:bg-orange-500 transition"
+                className="
+                  flex items-center justify-center
+                  w-13 h-13
+                  rounded-full
+                  bg-white/5
+                  border border-white/5
+                  text-white
+                  transition-all duration-300
+                  hover:bg-orange-500
+                  hover:shadow-lg hover:shadow-orange-500/30
+                "
               >
                 <Github />
               </a>
@@ -152,10 +174,41 @@ ${message}
               <a
                 href="https://www.linkedin.com/in/shivam-agrawal-developer/"
                 target="_blank"
-                className="p-3 rounded-full bg-white/5 hover:bg-orange-500 transition"
+                className="
+                  flex items-center justify-center
+                  w-13 h-13
+                  rounded-full
+                  bg-white/5
+                  border border-white/5
+                  text-white
+                  transition-all duration-300
+                  hover:bg-orange-500
+                  hover:shadow-lg hover:shadow-orange-500/40
+                "
               >
                 <Linkedin />
               </a>
+
+              <a
+                href="https://wa.me/917352334273?text=Hello%20Shivam%20Agrawal,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="
+                  flex items-center justify-center
+                  w-13 h-13
+                  rounded-full
+                  bg-white/5
+                  border border-white/5
+                  text-white
+                  transition-all duration-300
+                  hover:bg-orange-500
+                  hover:shadow-lg hover:shadow-orange-500/40
+                "
+              >
+                <FaWhatsapp size={22} />
+              </a>
+              
             </div>
           </motion.div>
 

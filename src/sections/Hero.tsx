@@ -150,7 +150,7 @@ export default function Hero() {
 
                 <Typewriter
                   words={[
-                    "Frontend Developer",
+                    "Software Engineer",
                     "UI Engineer",
                     "Creative Designer",
                     "Problem Solver",
@@ -180,10 +180,11 @@ export default function Hero() {
               <a
                 href="#projects"
                 className="
-                px-7 py-3 rounded-lg
+                px-5 py-3 rounded-lg
                 bg-orange-500 hover:bg-orange-600
                 transition font-medium
                 flex items-center gap-2
+                w-40
               "
               >
                 <Rocket size={18} />
@@ -195,37 +196,59 @@ export default function Hero() {
                 href="/resume.pdf"
                 download
                 className="
-                px-7 py-3 rounded-lg
+                px-8 py-3 rounded-lg
                 border border-gray-600
                 text-gray-300
                 hover:border-orange-500
                 hover:text-orange-500
                 transition font-medium
                 flex items-center gap-2
+                w-40
               "
               >
                 <FileDown size={18} />
                 Resume
               </a>
 
+              {/* Download Cover Letter */}
+              <a
+                href="/cover_letter.pdf"
+                download
+                className="
+                flex items-center justify-center gap-2
+                w-40
+                px-4 py-3
+                rounded-lg
+                text-black
+                bg-orange-500
+                font-medium
+                transition-all duration-300
+                hover:bg-transparent
+                hover:text-orange-500
+                hover:border border-orange-500
+              "
+              >
+                <FileDown size={18} />
+                Cover Letter
+              </a>
+
               {/* Contact */}
               <a
                 href="#contact"
                 className="
-                px-7 py-3 rounded-lg
+                px-8 py-3 rounded-lg
                 border border-orange-500
                 text-orange-500
                 hover:bg-orange-500
                 hover:text-black
                 transition font-medium
                 flex items-center gap-2
+                w-40
               "
               >
                 <MessageCircle size={18} />
-                Let's Connect
+                  Connect
               </a>
-
-              
 
             </div>
  

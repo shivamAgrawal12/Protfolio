@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-scroll"
+import { FaWhatsapp } from "react-icons/fa";
 import {
   Github,
   Linkedin,
@@ -79,6 +80,14 @@ export default function Navbar() {
 
           <a href="https://www.linkedin.com/in/shivam-agrawal-developer/" target="_blank">
             <Linkedin size={18} />
+          </a>
+
+          <a href="https://wa.me/917352334273?text=Hello%20Shivam%20Agrawal,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp
+          ">
+            <FaWhatsapp size={18} />
           </a>
         </div>
 
