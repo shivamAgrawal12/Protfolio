@@ -8,6 +8,12 @@ import {
 
 const projects = [
   {
+    title: "Tayyib Co.",
+    desc: "Beauty and wellness company website",
+    tech: ["React", "Redux", "CSS", "Tailwind CSS", "API", "Typescript", "JSON"],
+    link: "https://tayyibdemo.netlify.app/",
+  },
+  {
     title: "Medical Study",
     desc: "Study material for medical students",
     tech: ["React", "Redux", "JSON", "Tailwind CSS", "Email.js"],
@@ -19,6 +25,12 @@ const projects = [
     tech: ["React", "Redux", "CSS", "Tailwind CSS", "API"],
     link: "https://moviedemostream.netlify.app/",
   },
+   {
+    title: "Ready to Milk",
+    desc: "Music for Improved Milk Yield",
+    tech: ["React", "Redux", "CSS", "Tailwind CSS", "API", "Typescript", "Node.js", "Express.js", "MongoDB"],
+    link: "https://taskanimall.netlify.app/",
+  },
   {
     title: "Website",
     desc: "Robotic Company website",
@@ -26,25 +38,11 @@ const projects = [
     link: "https://leapmile.com/",
   },
   {
-    title: "Smart Locker",
-    desc: "User type authentication system for smart locker",
-    tech: ["React", "Redux", "CSS", "Tailwind CSS", "API"],
-    link: "https://app.qikpod.com/",
-  },
-  {
-    title: "Market Report",
-    desc: "Admin system",
-    tech: ["React", "Redux", "CSS", "Tailwind CSS", "API"],
-    link: "https://reports-market.netlify.app/",
-  },
-  {
     title: "XYZ Restaurant",
     desc: "Restaurant reservation system",
     tech: ["React", "Redux", "CSS"],
     link: "https://xyresturent.netlify.app/",
-  },
-  
-  
+  },  
 ]
 
 /* ================= COMPONENT ================= */
@@ -53,7 +51,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-32 px-6 relative"
+      className="py-15 px-6 relative"
     >
       <div className="max-w-7xl mx-auto fade-up">
 
@@ -108,7 +106,7 @@ export default function Projects() {
                 <div
                   className="
                     absolute inset-0
-                    bg-gradient-to-t
+                    bg-linear-to-t
                     from-black/70
                     via-black/20
                     to-transparent
@@ -174,6 +172,27 @@ export default function Projects() {
           ))}
 
         </div>
+
+        {/* <div className="flex justify-center py-5">
+
+
+          <div className="relative flex flex-col items-center justify-center py-10 overflow-hidden">
+            <div className="absolute w-500 h-30 border border-orange-500/30 rounded-full blur-[1px]" />
+            <p className="mb-2 text-xs tracking-[0.2em] uppercase text-gray-500">
+              THERE'S
+            </p>
+
+            <h2 className="text-xl md:text-2xl font-extrabold tracking-widest uppercase bg-linear-to-r from-orange-400 via-pink-400 to-violet-400 bg-clip-text text-transparent">
+              MANY MORE
+            </h2>
+
+            <p className="mt-3 text-sm tracking-[0.3em] uppercase text-gray-500">
+              INNOVATIONS IN PROGRESS
+            </p>
+          </div>
+
+      </div> */}
+
       </div>
     </section>
   )

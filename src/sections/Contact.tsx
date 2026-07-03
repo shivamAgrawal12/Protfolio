@@ -46,7 +46,7 @@ ${message}
         "service_csa1qfj",
         "template_lbl35dm",
         {
-          message: finalMessage, // 👈 sending everything inside message
+          message: finalMessage, // sending everything inside message
         },
         "NoFD-Mq0GLCONReKg"
       )
@@ -66,7 +66,7 @@ ${message}
     <section
       id="contact"
       className="
-        py-32 px-6
+        py-15 px-6
         relative
         overflow-hidden
       "
@@ -75,7 +75,7 @@ ${message}
       <div
         className="
           absolute inset-0
-          bg-gradient-to-br
+          bg-linear-to-br
           from-orange-500/5
           via-transparent
           to-purple-500/5

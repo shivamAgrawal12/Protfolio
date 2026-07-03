@@ -5,14 +5,18 @@ import { useEffect, useState } from "react"
 
 const CODE_LINES = `const developer = {
   name: "Shivam Agrawal",
-  role: "Frontend Engineer",
+  role: "Software Engineer",
   designer: true,
   experience: "4+ Years",
-  skills: [
+  strong skills: [
     "React",
     "TypeScript",
     "Tailwind",
-    "Next.js"
+    "Next.js",
+    "Node.js",
+    "Git",
+    "Docker",
+    "CI/CD"
   ],
   passion: "Building Impactful UI"
 };`
@@ -167,7 +171,7 @@ export default function Hero() {
               I design and develop high-performance,
               visually engaging digital experiences
               using modern technologies like
-              React, TypeScript, and Tailwind CSS.
+              React.js, Redux, Next.js, TypeScript, Node.js and Tailwind CSS.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -257,8 +261,8 @@ export default function Hero() {
                 className="
                 text-sm text-gray-300
                 overflow-x-auto
-                h-[260px]
-                md:h-auto md:max-h-none md:min-h-[260px]
+                h-[330px]
+                md:h-auto md:max-h-none md:min-h-[330px]
                 whitespace-pre-wrap
               "
               >

@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
-/* ------------------ */
 /* Base Theme         */
-/* ------------------ */
+
 
 :root {
-  --bg: #05060f;
-  --card: rgba(15, 15, 25, 0.8);
-  --text: #f8fafc;
-  --accent: #f97316;
+  --bg: #0D1F1C;
+  --card: rgba(23, 43, 38, 0.82);
+  --text: #F6FFFC;
+  --accent: #4ADE80;
 }
 
-/* ------------------ */
 /* Base Styles        */
-/* ------------------ */
 
 html {
   scroll-behavior: smooth;

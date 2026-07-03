@@ -32,7 +32,7 @@ export default function Education() {
     <section
       id="education"
       className="
-        py-32 px-6
+        py-15 px-6
         relative
         overflow-hidden
       "
@@ -41,7 +41,7 @@ export default function Education() {
       <div
         className="
           absolute inset-0
-          bg-gradient-to-br
+          bg-linear-to-br
           from-orange-500/5
           via-transparent
           to-purple-500/5

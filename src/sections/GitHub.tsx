@@ -6,7 +6,7 @@ export default function GitHub() {
   return (
     <section
       className="
-        py-32 px-6
+        py-15 px-6
         bg-white dark:bg-slate-900
         transition-colors
       "

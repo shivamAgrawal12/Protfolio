@@ -116,7 +116,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-32 px-6 relative overflow-hidden"
+      className="py-15 px-6 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -162,7 +162,7 @@ export default function Skills() {
                   className={`
                     absolute inset-0
                     rounded-3xl
-                    bg-gradient-to-r ${group.gradient}
+                    bg-linear-to-r ${group.gradient}
                     opacity-0
                     group-hover:opacity-100
                     blur-xl
@@ -189,7 +189,7 @@ export default function Skills() {
                     className="
                       absolute top-0 left-[-150%]
                       w-[120%] h-full
-                      bg-gradient-to-r
+                      bg-linear-to-r
                       from-transparent
                       via-white/10
                       to-transparent
@@ -206,7 +206,7 @@ export default function Skills() {
                     <div
                       className={`
                         p-3 rounded-xl
-                        bg-gradient-to-r ${group.gradient}
+                        bg-linear-to-r ${group.gradient}
                         text-black
                         shadow-lg
                       `}

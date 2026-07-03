@@ -12,7 +12,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-32 px-6 relative overflow-hidden"
+      className="py-15 px-6 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -59,7 +59,7 @@ export default function About() {
               className="
                 absolute inset-0
                 rounded-3xl
-                bg-gradient-to-r
+                bg-linear-to-r
                 from-orange-500/20
                 via-purple-500/20
                 to-blue-500/20
@@ -83,7 +83,7 @@ export default function About() {
               </p>
 
               <p className="text-gray-300 leading-relaxed">
-                For 4+ years I was the sole frontend engineer on a real-time robot control and operations 
+                For 4+ years I was the sole software engineer on a real-time robot control and operations 
                 platform, owning the entire client-side stack: live data visualisation, interactive maps, 
                 role-based authentication, reporting dashboards, and a component library of 20+ reusable 
                 elements used across the product.
@@ -212,10 +212,10 @@ export default function About() {
 
               <div>
                 <h4 className="font-semibold">
-                  Frontend Engineer
+                  Software Engineer
                 </h4>
                 <p className="text-gray-400 text-sm">
-                  React • TypeScript • Performance
+                  React • TypeScript • Node.js
                 </p>
               </div>
             </div>
