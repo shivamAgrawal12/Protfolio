@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-scroll"
-import { FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import {
   Github,
   Linkedin,
@@ -56,7 +56,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-6">
 
           {links.map((l) => (
             <Link
@@ -88,6 +88,12 @@ export default function Navbar() {
             aria-label="WhatsApp
           ">
             <FaWhatsapp size={18} />
+          </a>
+
+          <a href="tel:+917352334273"
+              aria-label="Call Shivam Agrawal"
+          >
+            <FaPhoneAlt size={14} />
           </a>
         </div>
 

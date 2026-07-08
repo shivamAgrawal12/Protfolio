@@ -8,7 +8,7 @@ import {
 import { useRef } from "react"
 import emailjs from "@emailjs/browser"
 
-import { FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 /* ================= COMPONENT ================= */
 
@@ -135,7 +135,7 @@ ${message}
               </span>
             </div>
 
-            <div className="flex gap-5 pt-6">
+            <div className="flex gap-3.5 pt-5">
               <a
                 href="mailto:agrawalshivam7352@gmail.com"
                 className="
@@ -207,6 +207,24 @@ ${message}
                 "
               >
                 <FaWhatsapp size={22} />
+              </a>
+
+              <a
+                href="tel:+917352334273"
+                aria-label="Call Shivam Agrawal"
+                className="
+                  flex items-center justify-center
+                  w-13 h-13
+                  rounded-full
+                  bg-white/5
+                  border border-white/5
+                  text-white
+                  transition-all duration-300
+                  hover:bg-orange-500
+                  hover:shadow-lg hover:shadow-orange-500/40
+                "
+              >
+                <FaPhoneAlt size={18} />
               </a>
               
             </div>

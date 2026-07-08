@@ -180,11 +180,11 @@ export default function Hero() {
               <a
                 href="#projects"
                 className="
-                px-5 py-3 rounded-lg
+                px-4.5 py-3 rounded-lg
                 bg-orange-500 hover:bg-orange-600
                 transition font-medium
                 flex items-center gap-2
-                w-40
+                w-37
               "
               >
                 <Rocket size={18} />
@@ -196,14 +196,14 @@ export default function Hero() {
                 href="/resume.pdf"
                 download
                 className="
-                px-8 py-3 rounded-lg
+                px-6 py-3 rounded-lg
                 border border-gray-600
                 text-gray-300
                 hover:border-orange-500
                 hover:text-orange-500
                 transition font-medium
                 flex items-center gap-2
-                w-40
+                w-35
               "
               >
                 <FileDown size={18} />
@@ -216,8 +216,8 @@ export default function Hero() {
                 download
                 className="
                 flex items-center justify-center gap-2
-                w-40
-                px-4 py-3
+                w-37
+                px-2.5 py-3
                 rounded-lg
                 text-black
                 bg-orange-500
@@ -236,14 +236,14 @@ export default function Hero() {
               <a
                 href="#contact"
                 className="
-                px-8 py-3 rounded-lg
+                px-6 py-3 rounded-lg
                 border border-orange-500
                 text-orange-500
                 hover:bg-orange-500
                 hover:text-black
                 transition font-medium
                 flex items-center gap-2
-                w-40
+                w-35
               "
               >
                 <MessageCircle size={18} />

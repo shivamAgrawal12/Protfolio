@@ -2,12 +2,15 @@
 
 /* Base Theme         */
 
-
 :root {
-  --bg: #0D1F1C;
-  --card: rgba(23, 43, 38, 0.82);
-  --text: #F6FFFC;
-  --accent: #4ADE80;
+  --bg: #05060F;
+  --card: #0F172A;
+  --card-hover: #162033;
+  --text: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --accent: #22D3EE;
+  --accent-hover: #67E8F9;
+  --border: rgba(255,255,255,.08);
 }
 
 /* Base Styles        */
@@ -32,6 +35,4 @@ body {
   }
 }
 
-/* ------------------ */
-/* Glass Effect       */
-/* -------------*
+/*****  Glass Effect     *******/
