@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
 import { CheckCircle2, Zap, Target, Users, X } from "lucide-react";
 import joiner from "../assets/joiner.png";
-// import avatar from "../assets/avatar.png"; // your profile photo
 
 const Immediate = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const popupClosed = sessionStorage.getItem("immediate-popup");
-    if (!popupClosed) {
-      setIsOpen(true);
+    try {
+      if (!sessionStorage.getItem("immediate-popup")) setIsOpen(true)
+    } catch {
+      setIsOpen(true)
     }
   }, []);
 
   const closePopup = () => {
-    sessionStorage.setItem("immediate-popup", "closed");
     setIsOpen(false);
-  };
+    try {
+      sessionStorage.setItem("immediate-popup", "closed")
+    } catch {
+      // Continue without session persistence.
+    }  };
 
   if (!isOpen) return null;
 
@@ -130,7 +133,8 @@ const Immediate = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-              <button
+              <a
+                href="#contact"
                 onClick={closePopup}
                 className="
                   flex items-center justify-center gap-2
@@ -148,7 +152,7 @@ const Immediate = () => {
                 "
               >
                 LET'S WORK TOGETHER
-              </button>
+              </a>   
             </div>
           </div>
         </div>
