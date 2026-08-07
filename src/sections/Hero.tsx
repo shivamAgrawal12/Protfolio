@@ -130,6 +130,19 @@ export default function Hero() {
               ⚡ Available for Opportunities
             </div>
 
+{/***************** Immediate joinner  ***************/}
+
+            <div
+              className="
+              inline-flex items-center gap-2
+              px-4 py-1 ml-3 rounded-full
+              bg-green-500/10 text-green-500
+              mb-6 text-sm
+            "
+            >
+              🟢 Immedaite Joiner
+            </div>
+
             <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold leading-tight mb-6">
 
               Hi, I'm <span className="text-orange-500">Shivam</span>

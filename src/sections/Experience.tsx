@@ -8,6 +8,7 @@ const experiences = [
     company: "Zuqo Technologies",
     duration: "Mar 2026 - Jun 2026",
     highlights: [
+      "Short-term engagement",
       "Developed and maintained scalable, secure, and high-performance web applications using React.js, TypeScript, JavaScript, Tailwind CSS, and Python.",
       "Led and collaborated with cross-functional teams to deliver impactful, user-focused UI features that improved product usability and business outcomes.",
       "Enhanced application performance, accessibility, and code quality by implementing modern frontend best practices and reusable component architectures.",

@@ -5,6 +5,7 @@ import AnimatedBackground from "./components/AnimatedBackground"
 import CustomCursor from "./components/CustomCursor"
 import ChatBot from "./components/ChatBot"
 import { useScrollAnimations } from "./hooks/useScrollAnimations"
+import Immediate from "./sections/Immediate";
 
 export default function App() {
   /* Enable Scroll Animations */
@@ -21,6 +22,9 @@ export default function App() {
 
       {/* Navbar */}
       <Navbar />
+
+      {/* Immediate Joiner Badge */}
+      <Immediate />
 
       {/* Main Content */}
       <div className="pt-20 relative z-10">
